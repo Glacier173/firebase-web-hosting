@@ -1,0 +1,145 @@
+[debug] [2023-10-16T17:27:12.846Z] ----------------------------------------------------------------------
+[debug] [2023-10-16T17:27:12.848Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2023-10-16T17:27:12.848Z] CLI Version:   11.14.4
+[debug] [2023-10-16T17:27:12.848Z] Platform:      darwin
+[debug] [2023-10-16T17:27:12.848Z] Node Version:  v16.18.0
+[debug] [2023-10-16T17:27:12.863Z] Time:          Mon Oct 16 2023 10:27:12 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-10-16T17:27:12.863Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-16T17:27:12.930Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-16T17:27:12.930Z] > authorizing via signed-in user (wyatt.va@icloud.com)
+[debug] [2023-10-16T17:27:12.930Z] [iam] checking project wyatt-van-amburg for permissions ["firebase.projects.get"]
+[debug] [2023-10-16T17:27:12.934Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions [none]
+[debug] [2023-10-16T17:27:12.934Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions x-goog-quota-user=projects/wyatt-van-amburg
+[debug] [2023-10-16T17:27:12.934Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:27:13.216Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions 200
+[debug] [2023-10-16T17:27:13.216Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:27:13.217Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:27:13.410Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:27:13.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] 
+[info] === Serving from '/Users/wyatt/firebase-web-hosting'...
+[info] 
+[debug] [2023-10-16T17:27:13.413Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 
+[debug] [2023-10-16T17:27:14.085Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 200
+[debug] [2023-10-16T17:27:14.085Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites {"sites":[{"name":"projects/wyatt-van-amburg/sites/wyatt-van-amburg","defaultUrl":"https://wyatt-van-amburg.web.app","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-16T17:27:14.085Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config [none]
+[debug] [2023-10-16T17:27:14.535Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config 200
+[debug] [2023-10-16T17:27:14.535Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config {"projectId":"wyatt-van-amburg","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","storageBucket":"wyatt-van-amburg.appspot.com","apiKey":"AIzaSyABghcilsbx0_dEXg-I0626ikCWc1Km4Zk","authDomain":"wyatt-van-amburg.firebaseapp.com","messagingSenderId":"136531349199"}
+[debug] [2023-10-16T17:27:14.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:27:14.729Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:27:14.729Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] i  hosting[wyatt-van-amburg]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[wyatt-van-amburg]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2023-10-16T17:28:53.441Z] ----------------------------------------------------------------------
+[debug] [2023-10-16T17:28:53.443Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2023-10-16T17:28:53.444Z] CLI Version:   11.14.4
+[debug] [2023-10-16T17:28:53.444Z] Platform:      darwin
+[debug] [2023-10-16T17:28:53.444Z] Node Version:  v16.18.0
+[debug] [2023-10-16T17:28:53.445Z] Time:          Mon Oct 16 2023 10:28:53 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-10-16T17:28:53.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-16T17:28:53.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-16T17:28:53.503Z] > authorizing via signed-in user (wyatt.va@icloud.com)
+[debug] [2023-10-16T17:28:53.503Z] [iam] checking project wyatt-van-amburg for permissions ["firebase.projects.get"]
+[debug] [2023-10-16T17:28:53.504Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions [none]
+[debug] [2023-10-16T17:28:53.505Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions x-goog-quota-user=projects/wyatt-van-amburg
+[debug] [2023-10-16T17:28:53.505Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:28:53.768Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions 200
+[debug] [2023-10-16T17:28:53.768Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:28:53.769Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:28:53.963Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:28:53.963Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] 
+[info] === Serving from '/Users/wyatt/firebase-web-hosting'...
+[info] 
+[debug] [2023-10-16T17:28:53.966Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 
+[debug] [2023-10-16T17:28:54.608Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 200
+[debug] [2023-10-16T17:28:54.608Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites {"sites":[{"name":"projects/wyatt-van-amburg/sites/wyatt-van-amburg","defaultUrl":"https://wyatt-van-amburg.web.app","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-16T17:28:54.608Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config [none]
+[debug] [2023-10-16T17:28:54.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config 200
+[debug] [2023-10-16T17:28:54.965Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config {"projectId":"wyatt-van-amburg","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","storageBucket":"wyatt-van-amburg.appspot.com","apiKey":"AIzaSyABghcilsbx0_dEXg-I0626ikCWc1Km4Zk","authDomain":"wyatt-van-amburg.firebaseapp.com","messagingSenderId":"136531349199"}
+[debug] [2023-10-16T17:28:54.997Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:28:55.327Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:28:55.327Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] i  hosting[wyatt-van-amburg]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[wyatt-van-amburg]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:31 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:31 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:31.915Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js [none]
+[debug] [2023-10-16T17:32:31.937Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js [none]
+[debug] [2023-10-16T17:32:31.942Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js [none]
+[debug] [2023-10-16T17:32:31.945Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js [none]
+[debug] [2023-10-16T17:32:31.947Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-functions-compat.js [none]
+[debug] [2023-10-16T17:32:31.949Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging-compat.js [none]
+[debug] [2023-10-16T17:32:32.110Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js 200
+[debug] [2023-10-16T17:32:32.110Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-app-compat.js HTTP/1.1" 200 9306 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-app-compat.js HTTP/1.1\" 200 9306 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.116Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js 200
+[debug] [2023-10-16T17:32:32.116Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js [stream]
+[debug] [2023-10-16T17:32:32.120Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging-compat.js 200
+[debug] [2023-10-16T17:32:32.120Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-messaging-compat.js HTTP/1.1" 200 9934 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-messaging-compat.js HTTP/1.1\" 200 9934 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.122Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js 200
+[debug] [2023-10-16T17:32:32.123Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js [stream]
+[debug] [2023-10-16T17:32:32.125Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-functions-compat.js 200
+[debug] [2023-10-16T17:32:32.125Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-functions-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-functions-compat.js HTTP/1.1" 200 3252 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-functions-compat.js HTTP/1.1\" 200 3252 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.127Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js 200
+[debug] [2023-10-16T17:32:32.127Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js [stream]
+[debug] [2023-10-16T17:32:32.129Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js [none]
+[debug] [2023-10-16T17:32:32.132Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-database-compat.js HTTP/1.1" 200 47958 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-database-compat.js HTTP/1.1\" 200 47958 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-auth-compat.js HTTP/1.1" 200 39106 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-auth-compat.js HTTP/1.1\" 200 39106 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.140Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-remote-config-compat.js [none]
+[debug] [2023-10-16T17:32:32.142Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-performance-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-firestore-compat.js HTTP/1.1" 200 100856 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-firestore-compat.js HTTP/1.1\" 200 100856 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.213Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js 200
+[debug] [2023-10-16T17:32:32.213Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-storage-compat.js HTTP/1.1" 200 13326 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-storage-compat.js HTTP/1.1\" 200 13326 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.248Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-remote-config-compat.js 200
+[debug] [2023-10-16T17:32:32.248Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-remote-config-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-remote-config-compat.js HTTP/1.1" 200 8814 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-remote-config-compat.js HTTP/1.1\" 200 8814 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.252Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics-compat.js 200
+[debug] [2023-10-16T17:32:32.252Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-analytics-compat.js HTTP/1.1" 200 9216 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-analytics-compat.js HTTP/1.1\" 200 9216 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:32:32.257Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-performance-compat.js 200
+[debug] [2023-10-16T17:32:32.257Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.5.0/firebase-performance-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /__/firebase/10.5.0/firebase-performance-compat.js HTTP/1.1" 200 10251 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /__/firebase/10.5.0/firebase-performance-compat.js HTTP/1.1\" 200 10251 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:32:32 +0000] \"GET /favicon.ico HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:33:52 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:33:52 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:33:52 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:33:52 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-16T17:35:14.581Z] ----------------------------------------------------------------------
+[debug] [2023-10-16T17:35:14.583Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2023-10-16T17:35:14.583Z] CLI Version:   11.14.4
+[debug] [2023-10-16T17:35:14.583Z] Platform:      darwin
+[debug] [2023-10-16T17:35:14.583Z] Node Version:  v16.18.0
+[debug] [2023-10-16T17:35:14.598Z] Time:          Mon Oct 16 2023 10:35:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-10-16T17:35:14.599Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-16T17:35:14.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-16T17:35:14.656Z] > authorizing via signed-in user (wyatt.va@icloud.com)
+[debug] [2023-10-16T17:35:14.656Z] [iam] checking project wyatt-van-amburg for permissions ["firebase.projects.get"]
+[debug] [2023-10-16T17:35:14.660Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions [none]
+[debug] [2023-10-16T17:35:14.661Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions x-goog-quota-user=projects/wyatt-van-amburg
+[debug] [2023-10-16T17:35:14.661Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:35:14.947Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions 200
+[debug] [2023-10-16T17:35:14.947Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wyatt-van-amburg:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-10-16T17:35:14.948Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:35:15.190Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:35:15.190Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] 
+[info] === Serving from '/Users/wyatt/firebase-web-hosting'...
+[info] 
+[debug] [2023-10-16T17:35:15.193Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 
+[debug] [2023-10-16T17:35:15.862Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites 200
+[debug] [2023-10-16T17:35:15.862Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/wyatt-van-amburg/sites {"sites":[{"name":"projects/wyatt-van-amburg/sites/wyatt-van-amburg","defaultUrl":"https://wyatt-van-amburg.web.app","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-16T17:35:15.863Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config [none]
+[debug] [2023-10-16T17:35:16.306Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config 200
+[debug] [2023-10-16T17:35:16.306Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg/webApps/1:136531349199:web:a0cabd96510cd5258ef1ba/config {"projectId":"wyatt-van-amburg","appId":"1:136531349199:web:a0cabd96510cd5258ef1ba","storageBucket":"wyatt-van-amburg.appspot.com","apiKey":"AIzaSyABghcilsbx0_dEXg-I0626ikCWc1Km4Zk","authDomain":"wyatt-van-amburg.firebaseapp.com","messagingSenderId":"136531349199"}
+[debug] [2023-10-16T17:35:16.318Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg [none]
+[debug] [2023-10-16T17:35:16.526Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg 200
+[debug] [2023-10-16T17:35:16.526Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wyatt-van-amburg {"projectId":"wyatt-van-amburg","projectNumber":"136531349199","displayName":"wyatt-van-amburg","name":"projects/wyatt-van-amburg","resources":{"hostingSite":"wyatt-van-amburg"},"state":"ACTIVE","etag":"1_91639f69-c792-4253-8940-7794e6dd79e5"}
+[info] i  hosting[wyatt-van-amburg]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[wyatt-van-amburg]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [16/Oct/2023:17:35:22 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [16/Oct/2023:17:35:22 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\""}}
