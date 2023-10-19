@@ -1,30 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        let player;
+
+
+        // Function to show the pop-up and start the YouTube video
+        function showPopUp() {
+            const popUp = document.getElementById("popUp");
+            popUp.style.display = "block";
+
+            // The video will be started when the user clicks "OK"
+        }
+
+        function closePopUp() {
+    const popUp = document.getElementById("popUp");
+    popUp.style.display = "none";
+
+    // Start playing the audio
+    const audio = document.getElementById("backgroundAudio");
+    audio.play();
+}
+
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="scripts/main.js"></script>
+    <title>Cookie Rain</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #00f, #f0f, #0ff, #ff0);
+            animation: holographicBackground 10s infinite;
+        }
+
+        /* Holographic screen background animation */
+        @keyframes holographicBackground {
+            0% {
+                background-position: 0 100%;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        /* Main Container Styles */
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        /* Section Styles */
+        .page-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title Styles */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Button Styles */
+        .cookie-button {
+            background-color: #f7c98d;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.5rem;
+            margin: 20px auto;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px #888888;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cookie-button:hover {
+            background-color: #ffb84d;
+            transform: scale(1.05);
+        }
+
+        /* Falling Cookie Styles */
+        .falling-cookie {
+            position: absolute;
+            animation: fallCookies 4s linear infinite;
+        }
+
+        @keyframes fallCookies {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Pop-Up Styles */
+        #popUp {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .popup-button {
+            background-color: #f7c98d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px #888888;
+            transition: background-color 0.2s;
+        }
+
+        .popup-button:hover {
+            background-color: #ffb84d;
+        }
+    </style>
 </head>
 <body>
-    <section id="section1" class="page-section">
-        <h1>Welcome to Section 1</h1>
-        <p>Content for section 1 goes here.</p>
-    </section>
-    
-    <section id="section2" class="page-section">
-        <h1>Welcome to Section 2</h1>
-        <p>Content for section 2 goes here.</p>
-    </section>
-    
-    <section id="section3" class="page-section">
-        <h1>Welcome to Section 3</h1>
-        <p>Content for section 3 goes here.</p>
-    </section>
+    <div id="container">
+        <button class="cookie-button" onclick="showPopUp()">🍪 Click the Cookie 🍪</button>
 
-    <section id="counter" class="page-section">
-        <h1>Counter</h1>
-        <p>Count: <span id="count">0</span></p>
+        <!-- Your Sections -->
+        <div class="page-section">
+            <h1>Fortnite Info</h1>
+            <p>Popular online multiplayer video game developed by Epic Games, known for its battle royale mode, where up to 100 players fight to be the last one standing, while also offering creative and save the world modes.</p>
+        </div>
+
+        <div class="page-section">
+            <h1>Cookie Clicker Challenge</h1>
+            <p>Click the cookie to see how many you can collect!</p>
+            <button class="cookie-button" onclick="clickCookie()">🍪 Click the Cookie 🍪</button>
+            <p>Cookies collected: <span id="cookieCount">0</span></p>
+        </div>
+
+        <div class="page-section">
+            <h1>Welcome to Section 3</h1>
+            <p>Content for section 3 goes here.</p>
+        </div>
+
+        <div class="page-section">
+            <h1>Counter</h1>
+            <p>Count: <span id="count">0</span></p>
+        </div>
+    </div>
+
+    <!-- Pop-Up -->
+    <div id="popUp">
+        <div class="popup-content">
+            <p>Click OK to begin</p>
+            <button class="popup-button" onclick="closePopUp()">OK</button>
+        </div>
+    </div>
+
+    <!-- Audio element for background music -->
+    <audio id="backgroundAudio" controls autoplay loop>
+        <source src="fortniteLobbyMusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <script>
+        let cookieCount = 0;
+
+        function createFallingCookie() {
+            const fallingCookie = document.createElement("div");
+            fallingCookie.className = "falling-cookie";
+            fallingCookie.textContent = "🍪";
+            fallingCookie.style.left = `${Math.random() * 100}vw`;
+            document.getElementById("container").appendChild(fallingCookie);
+        }
+
+        function clickCookie() {
+            // Create and animate multiple falling cookie elements
+            for (let i = 0; i < 10; i++) {
+                createFallingCookie();
+            }
+
+            // Increment the cookie count
+            cookieCount++;
+            document.getElementById("cookieCount").textContent = cookieCount;
+        }
+    </script>
 </body>
 </html>

@@ -7,17 +7,17 @@ body {
 .page-section {
     padding: 20px;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(255, 0, 212);
 }
 
 #section1 {
-    background-color: #e6f7ff;
+    background-color: #00aeff;
 }
 
 #section2 {
-    background-color: #ffe6e6;
+    background-color: #ff0000;
 }
 
 #section3 {
-    background-color: #e6ffe6;
+    background-color: #00ff00;
 }
