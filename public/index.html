@@ -4,7 +4,6 @@
     <script>
         let player;
 
-
         // Function to show the pop-up and start the YouTube video
         function showPopUp() {
             const popUp = document.getElementById("popUp");
@@ -14,13 +13,13 @@
         }
 
         function closePopUp() {
-    const popUp = document.getElementById("popUp");
-    popUp.style.display = "none";
+            const popUp = document.getElementById("popUp");
+            popUp.style.display = "none";
 
-    // Start playing the audio
-    const audio = document.getElementById("backgroundAudio");
-    audio.play();
-}
+            // Start playing the audio
+            const audio = document.getElementById("backgroundAudio");
+            audio.play();
+        }
 
     </script>
     <meta charset="UTF-8">
@@ -97,7 +96,10 @@
         /* Falling Cookie Styles */
         .falling-cookie {
             position: absolute;
+            font-size: 7rem; /* 7 times bigger */
             animation: fallCookies 4s linear infinite;
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+            top: 0; /* Start from the top */
         }
 
         @keyframes fallCookies {
@@ -165,13 +167,15 @@
         <div class="page-section">
             <h1>Cookie Clicker Challenge</h1>
             <p>Click the cookie to see how many you can collect!</p>
-            <button class="cookie-button" onclick="clickCookie()">🍪 Click the Cookie 🍪</button>
+            <button class="cookie-button" onclick="startCookies()">🍪 Start Cookies 🍪</button>
+            <button class="cookie-button" onclick="stopCookies()">🚫 Stop Cookies 🚫</button>
             <p>Cookies collected: <span id="cookieCount">0</span></p>
         </div>
 
         <div class="page-section">
-            <h1>Welcome to Section 3</h1>
-            <p>Content for section 3 goes here.</p>
+            <h1>Todays Human Attention Span</h1>
+            <p>
+                In today's digital age, human attention spans have drastically shortened due to the constant bombardment of information and stimuli. With the rise of smartphones and social media, individuals are exposed to a constant stream of notifications and bite-sized content, making it increasingly challenging to focus on one task for an extended period. This shortened attention span has significant implications for productivity, learning, and the way we consume information in our fast-paced world.</p>
         </div>
 
         <div class="page-section">
@@ -196,24 +200,32 @@
     
     <script>
         let cookieCount = 0;
+        let cookieInterval;
 
         function createFallingCookie() {
             const fallingCookie = document.createElement("div");
             fallingCookie.className = "falling-cookie";
             fallingCookie.textContent = "🍪";
             fallingCookie.style.left = `${Math.random() * 100}vw`;
+
+            fallingCookie.addEventListener("click", function () {
+                fallingCookie.parentNode.removeChild(fallingCookie);
+                cookieCount++;
+                document.getElementById("cookieCount").textContent = cookieCount;
+            });
+
             document.getElementById("container").appendChild(fallingCookie);
         }
 
-        function clickCookie() {
-            // Create and animate multiple falling cookie elements
-            for (let i = 0; i < 10; i++) {
-                createFallingCookie();
+        function startCookies() {
+            if (!cookieInterval) {
+                cookieInterval = setInterval(createFallingCookie, 1000); // Add cookies every 1 second
             }
+        }
 
-            // Increment the cookie count
-            cookieCount++;
-            document.getElementById("cookieCount").textContent = cookieCount;
+        function stopCookies() {
+            clearInterval(cookieInterval);
+            cookieInterval = null;
         }
     </script>
 </body>
