@@ -152,9 +152,25 @@
         .popup-button:hover {
             background-color: #ffb84d;
         }
+        .about-link {
+        position: fixed;
+        top: 50%;
+        right: 20px; /* Adjust this value to control the horizontal position */
+        transform: translateY(-50%);
+        text-decoration: none;
+        background-color: #f7c98d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .about-link:hover {
+        background-color: #ffb84d;
+    }
     </style>
 </head>
 <body>
+    <a class="about-link" href="about.html">About me</a>
     <div id="container">
         <button class="cookie-button" onclick="showPopUp()">🍪 Click the Cookie 🍪</button>
 
