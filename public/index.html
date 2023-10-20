@@ -52,6 +52,7 @@
             align-items: center;
             height: 100vh;
             overflow: auto;
+            position: relative;
         }
 
         /* Section Styles */
@@ -80,14 +81,14 @@
             background-color: #f7c98d;
             border: none;
             color: white;
-            padding: 15px 25px;
+            padding: 8px 12px; /* Adjusted button size */
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 1.5rem;
-            margin: 20px auto;
+            font-size: 1rem; /* Adjusted font size */
+            margin: 10px 0; /* Adjusted margin */
             cursor: pointer;
-            border-radius: 50%;
+            border-radius: 5px; /* Adjusted border radius */
             box-shadow: 2px 2px 4px #888888;
             transition: transform 0.2s, background-color 0.2s;
         }
@@ -171,6 +172,36 @@
     .about-link:hover {
         background-color: #ffb84d;
     }
+
+    /* Additional styles for the new buttons */
+    .background-button-container {
+        position: absolute;
+        top: 50%;
+        left: 10px; /* Adjust this value to control the horizontal position */
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .background-button {
+        background-color: #f7c98d;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px #888888;
+        transition: background-color 0.2s;
+    }
+
+    .background-button:hover {
+        background-color: #ffb84d;
+    }
     </style>
 </head>
 <body>
@@ -178,8 +209,7 @@
     <div id="container">
         <button class="cookie-button" onclick="showPopUp()">🍪 Click the Cookie 🍪</button>
 
-        <!-- Your Sections -->
-        <div class="page-section">
+        <div class="page-section" style="margin-top: 60px;">
             <h1>Fortnite Info</h1>
             <p>Popular online multiplayer video game developed by Epic Games, known for its battle royale mode, where up to 100 players fight to be the last one standing, while also offering creative and save the world modes.</p>
         </div>
@@ -226,25 +256,23 @@
         let cookieInterval;
 
         function createFallingCookie() {
-    const fallingCookie = document.createElement("div");
-    fallingCookie.className = "falling-cookie";
-    fallingCookie.textContent = "🍪";
-    fallingCookie.style.left = `${Math.random() * 100}vw`;
+            const fallingCookie = document.createElement("div");
+            fallingCookie.className = "falling-cookie";
+            fallingCookie.textContent = "🍪";
+            fallingCookie.style.left = `${Math.random() * 100}vw`;
 
-    fallingCookie.addEventListener("click", function () {
-        fallingCookie.parentNode.removeChild(fallingCookie);
-        cookieCount++;
-        document.getElementById("cookieCount").textContent = cookieCount;
+            fallingCookie.addEventListener("click", function () {
+                fallingCookie.parentNode.removeChild(fallingCookie);
+                cookieCount++;
+                document.getElementById("cookieCount").textContent = cookieCount;
 
-        // Create and play a new audio element for each cookie click
-        const audio = new Audio("vineBoom.mp3");
-        audio.play();
-    });
+                // Create and play a new audio element for each cookie click
+                const audio = new Audio("vineBoom.mp3");
+                audio.play();
+            });
 
-    document.getElementById("container").appendChild(fallingCookie);
-}
-
-
+            document.getElementById("container").appendChild(fallingCookie);
+        }
 
         function startCookies() {
             if (!cookieInterval) {
@@ -256,6 +284,24 @@
             clearInterval(cookieInterval);
             cookieInterval = null;
         }
+
+        // Function to make the background black
+        function makeBackgroundBlack() {
+            const body = document.body;
+            body.style.background = "black";
+        }
+
+        // Function to revert to the holographic background
+        function revertBackground() {
+            const body = document.body;
+            // Set the background to the holographic animation
+            body.style.background = "linear-gradient(45deg, #00f, #f0f, #0ff, #ff0)";
+            body.style.animation = "holographicBackground 10s infinite";
+        }
     </script>
+    <div class="background-button-container">
+        <button class="background-button" onclick="makeBackgroundBlack()">Make Background Black</button>
+        <button class="background-button" onclick="revertBackground()">Revert Background</button>
+    </div>
 </body>
 </html>
