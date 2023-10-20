@@ -97,13 +97,13 @@
             transform: scale(1.05);
         }
 
-        /* Falling Cookie Styles */
         .falling-cookie {
             position: absolute;
             font-size: 7rem; /* 7 times bigger */
             animation: fallCookies 4s linear infinite;
             cursor: pointer; /* Add cursor pointer to indicate clickable */
             top: 0; /* Start from the top */
+            left: calc(50% - 3.5rem); /* Centered horizontally */
         }
 
         @keyframes fallCookies {
@@ -199,8 +199,8 @@
         </div>
 
         <div class="page-section">
-            <h1>Counter</h1>
-            <p>Count: <span id="count">0</span></p>
+            <h1>Climate Change</h1>
+            <p>While the scientific consensus strongly supports the concept of climate change, there are individuals who question the extent of human influence on it. Some argue that natural climatic variations play a significant role, and that the potential economic repercussions of rapid and drastic policy changes outweigh the immediate environmental concerns.</p>
         </div>
     </div>
 
@@ -217,25 +217,34 @@
         <source src="fortniteLobbyMusic.mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
-    
+    <audio id="cookieClickSound">
+        <source src="vineBoom.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
     <script>
         let cookieCount = 0;
         let cookieInterval;
 
         function createFallingCookie() {
-            const fallingCookie = document.createElement("div");
-            fallingCookie.className = "falling-cookie";
-            fallingCookie.textContent = "🍪";
-            fallingCookie.style.left = `${Math.random() * 100}vw`;
+    const fallingCookie = document.createElement("div");
+    fallingCookie.className = "falling-cookie";
+    fallingCookie.textContent = "🍪";
+    fallingCookie.style.left = `${Math.random() * 100}vw`;
 
-            fallingCookie.addEventListener("click", function () {
-                fallingCookie.parentNode.removeChild(fallingCookie);
-                cookieCount++;
-                document.getElementById("cookieCount").textContent = cookieCount;
-            });
+    fallingCookie.addEventListener("click", function () {
+        fallingCookie.parentNode.removeChild(fallingCookie);
+        cookieCount++;
+        document.getElementById("cookieCount").textContent = cookieCount;
 
-            document.getElementById("container").appendChild(fallingCookie);
-        }
+        // Create and play a new audio element for each cookie click
+        const audio = new Audio("vineBoom.mp3");
+        audio.play();
+    });
+
+    document.getElementById("container").appendChild(fallingCookie);
+}
+
+
 
         function startCookies() {
             if (!cookieInterval) {
