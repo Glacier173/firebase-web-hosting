@@ -21,6 +21,17 @@
             audio.play();
         }
     </script>
+    <script>
+        // Function to navigate to the "about.html" page
+        function navigateToAboutPage() {
+            window.location.href = "about.html";
+        }
+    
+        // Add a click event listener to the "About" link
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".about-button").addEventListener("click", navigateToAboutPage);
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyatt Fun</title>
@@ -173,6 +184,22 @@
         background-color: #ffb84d;
     }
 
+    .about-button {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Adjust this value to control the horizontal position */
+    transform: translateY(-50%);
+    text-decoration: none;
+    background-color: #f7c98d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.about-button:hover {
+    background-color: #ffb84d;
+}
+
     /* Additional styles for the new buttons */
     .background-button-container {
         position: absolute;
@@ -199,13 +226,30 @@
         transition: background-color 0.2s;
     }
 
+    /* Styles for the "Info" button */
+    .info-link {
+        position: fixed;
+        top: 50%;
+        right: 20px; /* Adjust this value to control the horizontal position */
+        transform: translateY(-50%);
+        text-decoration: none;
+        background-color: #f7c98d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .info-link:hover {
+        background-color: #ffb84d;
+    }
+
     .background-button:hover {
         background-color: #ffb84d;
     }
     </style>
 </head>
 <body>
-    <a class="about-link" href="about.html">About me</a>
+    <a href="about.html" class="about-button">About Me</a>
     <div id="container">
         <button class="cookie-button" onclick="showPopUp()">🍪 Click the Cookie 🍪</button>
 
@@ -232,6 +276,7 @@
             <h1>Climate Change</h1>
             <p>While the scientific consensus strongly supports the concept of climate change, there are individuals who question the extent of human influence on it. Some argue that natural climatic variations play a significant role, and that the potential economic repercussions of rapid and drastic policy changes outweigh the immediate environmental concerns.</p>
         </div>
+        <a href="about.html" class="info-link">Info</a>
     </div>
 
     <!-- Pop-Up -->
