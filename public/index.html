@@ -110,13 +110,14 @@
         }
 
         .falling-cookie {
-            position: absolute;
-            font-size: 7rem; /* 7 times bigger */
-            animation: fallCookies 4s linear infinite;
-            cursor: pointer; /* Add cursor pointer to indicate clickable */
-            top: 0; /* Start from the top */
-            left: calc(50% - 3.5rem); /* Centered horizontally */
-        }
+    position: absolute;
+    font-size: 7rem;
+    animation: fallCookies 4s linear infinite;
+    cursor: pointer;
+    top: 0;
+    left: calc(50% - 3.5rem); /* Adjust this value to move the cookies further in */
+}
+
 
         @keyframes fallCookies {
             0% {
@@ -267,43 +268,47 @@
     <script>
         let cookieCount = 0;
         let cookieInterval;
-
+    
         function createFallingCookie() {
             const fallingCookie = document.createElement("div");
             fallingCookie.className = "falling-cookie";
             fallingCookie.textContent = "🍪";
             fallingCookie.style.left = `${Math.random() * 100}vw`;
-
+    
             fallingCookie.addEventListener("click", function () {
                 fallingCookie.parentNode.removeChild(fallingCookie);
                 cookieCount++;
                 document.getElementById("cookieCount").textContent = cookieCount;
-
+    
                 // Create and play a new audio element for each cookie click
                 const audio = new Audio("vineBoom.mp3");
                 audio.play();
             });
-
+    
             document.getElementById("container").appendChild(fallingCookie);
         }
-
+    
         function startCookies() {
             if (!cookieInterval) {
                 cookieInterval = setInterval(createFallingCookie, 1000); // Add cookies every 1 second
             }
         }
-
+    
         function stopCookies() {
             clearInterval(cookieInterval);
             cookieInterval = null;
+    
+            // Remove any cookies that were scheduled to fall
+            const fallingCookies = document.querySelectorAll(".falling-cookie");
+            fallingCookies.forEach((cookie) => cookie.parentNode.removeChild(cookie));
         }
-
+    
         // Function to make the background black
         function makeBackgroundBlack() {
             const body = document.body;
             body.style.background = "black";
         }
-
+    
         // Function to revert to the holographic background
         function revertBackground() {
             const body = document.body;
@@ -311,6 +316,8 @@
             body.style.background = "linear-gradient(45deg, #00f, #f0f, #0ff, #ff0)";
             body.style.animation = "holographicBackground 10s infinite";
         }
+    </script>
+    
     </script>
     <div class="background-button-container">
         <button class="background-button" onclick="makeBackgroundBlack()">Make Background Black</button>
