@@ -1,23 +1,221 @@
+
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #00f, #f0f, #0ff, #ff0);
+    animation: holographicBackground 10s infinite;
 }
 
+/* Holographic screen background animation */
+@keyframes holographicBackground {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Main Container Styles */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+/* Section Styles */
 .page-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px;
     padding: 20px;
-    margin: 20px 0;
-    border: 1px solid rgb(255, 0, 212);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#section1 {
-    background-color: #00aeff;
+/* Title Styles */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
 }
 
-#section2 {
-    background-color: #ff0000;
+/* Container for Section 1 */
+#section1-container {
+    margin-top: 20px; /* Adjust the margin-top value as needed */
 }
 
-#section3 {
-    background-color: #00ff00;
+/* Add margin to Section 1 to shift it down */
+.page-section:first-child {
+    margin-top: 60px;
+}
+
+/* Button Styles */
+.startCookie-button {
+    background-color: #f7c98d;
+    border: none;
+    color: white;
+    padding: 8px 12px; /* Adjusted button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; /* Adjusted font size */
+    margin: 10px 0; /* Adjusted margin */
+    cursor: pointer;
+    border-radius: 5px; /* Adjusted border radius */
+    box-shadow: 2px 2px 4px #888888;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.stopCookie-button {
+    background-color: #f7c98d;
+    border: none;
+    color: white;
+    padding: 8px 12px; /* Adjusted button size */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; /* Adjusted font size */
+    margin: 10px 0; /* Adjusted margin */
+    cursor: pointer;
+    border-radius: 5px; /* Adjusted border radius */
+    box-shadow: 2px 2px 4px #888888;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.startCookie-button:hover {
+    background-color: #ffb84d;
+    transform: scale(1.05);
+}
+.stopCookie-button:hover {
+    background-color: #ffb84d;
+    transform: scale(1.05);
+}
+
+.falling-cookie {
+position: absolute;
+font-size: 7rem;
+animation: fallCookies 4s linear infinite;
+cursor: pointer;
+top: 0;
+left: calc(50% - 3.5rem); /* Adjust this value to move the cookies further in */
+}
+
+
+@keyframes fallCookies {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Pop-Up Styles */
+#popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup-button {
+    background-color: #f7c98d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #888888;
+    transition: background-color 0.2s;
+}
+
+.popup-button:hover {
+    background-color: #ffb84d;
+}
+
+/* Additional styles for the new buttons */
+.background-button-container {
+position: absolute;
+top: 50%;
+left: 10px; /* Adjust this value to control the horizontal position */
+transform: translateY(-50%);
+display: flex;
+flex-direction: column;
+}
+
+.backgroundBlack-button {
+background-color: #f7c98d;
+border: none;
+color: white;
+padding: 8px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 1rem;
+margin: 10px 0;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 2px 2px 4px #888888;
+transition: background-color 0.2s;
+}
+
+.backgroundRevert-button {
+    background-color: #f7c98d;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #888888;
+    transition: background-color 0.2s;
+    }
+
+/* Styles for the "Info" button */
+.info-link {
+position: fixed;
+top: 50%;
+right: 20px; /* Adjust this value to control the horizontal position */
+transform: translateY(-50%);
+text-decoration: none;
+background-color: #f7c98d;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+}
+
+.info-link:hover {
+background-color: #ffb84d;
+}
+
+.background-button:hover {
+background-color: #ffb84d;
 }
