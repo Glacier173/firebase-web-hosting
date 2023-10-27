@@ -76,6 +76,17 @@ class Main {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Find the "Go To Game" button by its ID
+    const goToGameButton = document.getElementById("goToGameButton");
+
+    // Add a click event listener to the button
+    goToGameButton.addEventListener("click", function () {
+        // Redirect to the "game.html" page when the button is clicked
+        window.location.href = "game.html";
+    });
+});
+
 const main = new Main();
 
 // Attach event listeners
