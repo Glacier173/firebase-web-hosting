@@ -25,7 +25,7 @@ class Game {
         };
         
         // Initialize the Pacman font style
-        this.ctx.font = '36px PacmanFont';
+        this.ctx.font = '36px Arial';
         this.ctx.fillStyle = 'yellow';
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
@@ -100,7 +100,7 @@ class Game {
     }
 
     drawBounds() {
-        this.ctx.strokeStyle = 'red'; // Adjust the boundary color as needed
+        this.ctx.strokeStyle = 'black'; // Adjust the boundary color as needed
         this.ctx.lineWidth = 5; // Adjust the boundary line width as needed
         this.ctx.strokeRect(this.bounds.x, this.bounds.y, this.bounds.width, this.bounds.height);
     }
@@ -155,8 +155,8 @@ class Game {
 
     drawScore() {
         this.ctx.font = '24px Arial';
-        this.ctx.fillStyle = 'white';
-        this.ctx.fillText('Score: ' + this.score, 10, 30);
+        this.ctx.fillStyle = 'black';
+        this.ctx.fillText('Score: ' + this.score, 62, 30);
     }
 
     animatePacmanMouth() {
